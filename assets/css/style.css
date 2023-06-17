@@ -1,0 +1,278 @@
+/* Declaring CSS Varialbes for some colors */
+:root {
+    --back-color:#92cbcd;
+    --dark-blue:#445876;
+}
+
+/* Start HTML Tag Style Rules */
+header {
+    height:75px;
+}
+
+header, header nav, header ul {
+    display:flex;
+    width: 100%;
+    background-color:#31343d;    
+}
+
+footer {
+    color:var(--back-color);
+    width: 100%;
+    background-color:#31343d; 
+    text-align: center;
+    padding:40px;
+    margin-top:15px;
+}
+
+header h1 {
+    font-size: 200%;   
+    background-color: var(--back-color);
+    width:400px;
+    padding: 10px 10px 10px 40px;
+    margin-top:10px;
+}
+
+h1 {
+    font-size: 200%;   
+    color: var(--dark-blue);
+  
+}
+
+h2 {
+    font-size: 175%;
+}
+
+
+header ul {
+    justify-content:right;
+    align-items: center;
+}
+
+/* This rule sets up the animation for the header */
+header ul li {
+    margin:10px;
+    background-image:linear-gradient(var(--back-color), var(--back-color));
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 0.2em;
+    transition: all 0.25s ease-in;
+    flex:0 0 100px;
+    height: 20px;
+    color: var(--back-color);
+    text-align: center;
+}  
+
+header li > a {
+    color: var(--back-color);
+    text-decoration: none;    
+    transition: all 0.25s ease-in;
+}
+
+
+li:hover {
+    background-size: 100% 100%;
+}
+
+li:hover a {
+    color:white;
+}
+
+section {
+    display:flex;
+}
+
+section > nav > ul {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+/* This rule sets up the animation for the contact me links */
+section > nav > ul > li { 
+    margin:10px;
+    background-image:linear-gradient(var(--dark-blue), var(--dark-blue));
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 0.2em;
+    transition: all 0.25s ease-in;
+    flex:0 0 100px;
+    height: 20px;
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+section > nav > ul > li > a {
+    color: var(--dark-blue);
+    text-decoration: none;    
+    transition: all 0.25s ease-in;
+}
+
+section > aside {
+    flex: 25%;
+}
+
+section > div, section > nav {
+    flex: 75%;
+}
+
+section > nav {
+    margin-top:15px;
+}
+
+aside { 
+    display:flex;  
+    border-right: solid;
+    border-right-width: 5px;
+    border-right-color: var(--dark-blue);
+    padding-right:15px;
+    margin-left:15px;
+    margin-top: 15px;
+    justify-content: flex-end;
+}
+
+figure {
+    position: relative;
+}
+
+p {
+    margin:15px;
+    font-size: 20px;
+}
+
+/* Start Class Styling Rules */
+.header {
+    position: relative;
+    height:150px;
+    background-image: linear-gradient(50deg, rgb(25 52 88), rgb(101 131 168)); ;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.header > div {
+    position:absolute;
+    bottom:20px;  
+    right:100px;  
+    background-color: var(--back-color);
+    width:auto;
+}
+
+.row {
+    display: flex;
+    width:100%;
+}
+
+.main-img {
+    flex:100%;
+}
+
+.other-img {
+    flex:50%;
+}
+
+.main-img img, .other-img img {
+    width: 100%;
+    border:5px solid var(--back-color);
+}
+
+.main-img, .other-img {
+    margin: 15px;
+}
+
+.main-img a:hover, .other-img a:hover {
+    -webkit-filter: sepia(50%);
+    filter: sepia(50%);
+}
+
+/* Start ID Styling Rules */
+#subtitle {
+    font-size: 150%;   
+    background-color: var(--back-color);
+    padding: 10px;
+    margin-top:10px;
+    color: var(--dark-blue);
+}
+
+#headshot {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+figcaption {
+    position: absolute;
+    bottom:30px;
+    background-color: var(--back-color);
+    width: auto;
+    margin:15px;
+    padding: 10px;
+}
+
+/* Media Quiery Styling Rules for Tablet */
+@media screen and (max-width:943px) {
+    header {
+        flex-direction: column;
+        height:auto;
+    }
+    header ul, header figure, header h1, header > div {
+        display:flex;
+        justify-content:center;
+    }
+
+    .header > div {
+        position:absolute;
+        bottom:20px;  
+        right:unset;  
+        background-color: var(--back-color);
+        width:100%;
+    }
+    #subtitle {
+        font-size: 150%;   
+        background-color: var(--back-color);
+        width:auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    section > nav > ul {
+        display: flex;
+        flex-direction: column;
+        align-content:center;
+    }
+
+    section > nav > ul > li {
+        flex:0 0 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Media Quiery Styling Rules for Mobile */
+@media screen and (max-width:490px) {
+    header {
+        height:auto;
+    }
+    
+    ul, section  {
+        flex-direction: column;
+    }
+    ul {
+        justify-content:center;
+    }
+    
+    header ul li, ul li {
+        flex:0 0 20px;
+    }
+    
+    aside { 
+        display:flex;  
+        border-bottom: solid;
+        border-bottom-width: 5px;
+        border-bottom-color: var(--dark-blue);
+        border-right: none;
+        padding-bottom:15px;
+        margin-top:15px;
+        margin-left: 0;
+        justify-content: center;
+    }      
+}
