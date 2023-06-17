@@ -4,6 +4,11 @@
     --dark-blue:#445876;
 }
 
+/* Universal Style Rules */
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 /* Start HTML Tag Style Rules */
 header {
     height:75px;
@@ -27,7 +32,7 @@ footer {
 header h1 {
     font-size: 200%;   
     background-color: var(--back-color);
-    width:400px;
+    width:420px;
     padding: 10px 10px 10px 40px;
     margin-top:10px;
 }
@@ -207,7 +212,7 @@ figcaption {
 }
 
 /* Media Quiery Styling Rules for Tablet */
-@media screen and (max-width:943px) {
+@media screen and (max-width:968px) {
     header {
         flex-direction: column;
         height:auto;
